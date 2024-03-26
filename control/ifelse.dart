@@ -1,32 +1,20 @@
-// import 'dart:io';
-
-// main() {
-//   stdout.writeln('Cual es tu edad?:  ');
-
-//   int edad = int.parse(stdin.readLineSync() ?? '0');
-
-//   print(edad);
-//   // if (edad >= 17) {
-//   //   print('Menor de edad');
-//   // } else {
-//   //   print('Mayor de edad');
-//   // }
-// }
-
 import 'dart:io';
 
-void main() {
-  stdout.writeln('Cual es tu edad?');
+main() {
+  stdout.writeln('Cual es tu edad?:  ');
+
+  // int edad = int.parse(stdin.readLineSync() ?? '0');
 
   String input = stdin.readLineSync().toString();
 
   int edad = int.parse(input == '' ? '0' : input);
 
-  stdout.writeln('Tu Edad: $edad');
-
-  if (edad >= 18) {
-    stdout.writeln('Eres mayor de edad');
+  print(edad);
+  if (edad <= 17) {
+    stdout.writeln('Menor de edad');
+  } else if (edad >= 18 && edad <= 20) {
+    stdout.writeln('Mayor de edad');
   } else {
-    stdout.writeln('Eres menor de edad');
+    stdout.writeln('Ciudadano');
   }
 }
